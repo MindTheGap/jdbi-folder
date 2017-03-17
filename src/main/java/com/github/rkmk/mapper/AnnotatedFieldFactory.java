@@ -62,6 +62,7 @@ public class AnnotatedFieldFactory {
             AnnotatedField annotatedField = create(field);
             annotatedFields.add(annotatedField);
             if(annotatedField != null && annotatedField.isNestedField())  {
+                System.out.println("field namespace: " + annotatedField.getNameSpace() + ", field type: " + annotatedField.getType());
                 processFields(annotatedField.getType(), annotatedField.getNameSpace(), fields);
             }
             processField(fields, nameSpace, field, type);

@@ -18,9 +18,9 @@ public class DaoTest {
 
     private static DBI getDBI() {
         String db = System.getProperty("db");
-        if (db.equals("postgres"))
+        if (db.equals("postgres")) {
             return new DBI("jdbc:postgresql://localhost:5432/jdbi", "postgres", "");
-        else if(db.equals("mysql")) {
+        } else if(db.equals("mysql")) {
             return new DBI("jdbc:mysql://localhost/jdbi", "root", "");
         }
         return null;
