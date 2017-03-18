@@ -69,6 +69,7 @@ public class FieldHelper {
 
     public static <O> Object accessField(String fieldName, O o) {
         Field field = null;
+        System.out.println("got into accessField with fieldName: " + fieldName);
         try {
             field = o.getClass().getDeclaredField(fieldName);
         } catch (NoSuchFieldException e) {
